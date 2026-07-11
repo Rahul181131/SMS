@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Add Student | Student Management System</title>
+
+
+ <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+}
+
+/* Navbar */
+
+.navbar{
+    background:#2563eb;
+    color:white;
+    padding:18px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.navbar h2{
+    font-size:28px;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:500;
+}
+
+/* Form Container */
+
+.container{
+    width:850px;
+    max-width:95%;
+    background:white;
+    margin:40px auto;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.container h1{
+    text-align:center;
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.container p{
+    text-align:center;
+    color:#666;
+    margin-bottom:30px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.input-group label{
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    outline:none;
+    font-size:15px;
+}
+
+textarea{
+    resize:none;
+}
+
+.full-width{
+    grid-column:1/3;
+}
+
+/* Buttons */
+
+.buttons{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+button{
+    padding:12px 30px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.save{
+    background:#2563eb;
+    color:white;
+}
+
+.save:hover{
+    background:#1d4ed8;
+}
+
+.reset{
+    background:#ef4444;
+    color:white;
+}
+
+.reset:hover{
+    background:#dc2626;
+}
+
+@media(max-width:768px){
+
+.form-grid{
+grid-template-columns:1fr;
+}
+
+.full-width{
+grid-column:1;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+<h2>Student Management System</h2>
+
+<div>
+<a href="dashboard.html">Dashboard</a>
+<a href="students.html">Students</a>
+<a href="login.html">Logout</a>
+</div>
+
+</div>
+
+<div class="container">
+
+<h1>Add New Student</h1>
+
+<p>Enter the student's information to register them in the system.</p>
+
+<form id="studentForm">
+
+<div class="form-grid">
+
+<div class="input-group">
+<label>Student ID</label>
+<input id="studentId" type="text" placeholder="Enter Student ID" required>
+</div>
+
+<div class="input-group">
+<label>Full Name</label>
+<input id="name" type="text" placeholder="Enter Full Name" required>
+</div>
+
+<div class="input-group">
+<label>Email Address</label>
+<input id="email" type="email" placeholder="Enter Email" required>
+</div>
+
+<div class="input-group">
+<label>Mobile Number</label>
+<input id="mobile" type="tel" placeholder="Enter Mobile Number" required>
+</div>
+
+<div class="input-group">
+<label>Gender</label>
+<select id="gender" required>
+<option value="">Select Gender</option>
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+</select>
+</div>
+
+<div class="input-group">
+<label>Date of Birth</label>
+<input id="dob" type="date" required>
+</div>
+
+<div class="input-group">
+<label>Department</label>
+<select id="department" required>
+<option value="">Select Department</option>
+<option>Computer Science</option>
+<option>Information Technology</option>
+<option>Electronics</option>
+<option>Mechanical</option>
+<option>Civil</option>
+</select>
+</div>
+
+<div class="input-group">
+<label>Course</label>
+<input id="course" type="text" placeholder="Enter Course Name">
+</div>
+
+<div class="input-group">
+<label>Year</label>
+<select>
+<option>1st Year</option>
+<option>2nd Year</option>
+<option>3rd Year</option>
+<option>4th Year</option>
+</select>
+</div>
+
+<div class="input-group">
+<label>Admission Date</label>
+<input type="date">
+</div>
+
+<div class="input-group full-width">
+<label>Address</label>
+<textarea id="address" rows="4" placeholder="Enter Student Address"></textarea>
+</div>
+
+</div>
+
+<div class="buttons">
+
+<button type="submit" class="save">
+<i class="fa-solid fa-floppy-disk"></i>
+ Save Student
+</button>
+
+<button type="reset" class="reset">
+<i class="fa-solid fa-rotate-left"></i>
+ Reset
+</button>
+
+</div>
+
+</form>
+
+</div>
+<script src="javaScript/addstudent.js"></script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+        }
+
+        body{
+            background:#f5f7fb;
+            color:#333;
+        }
+
+        /* Navigation */
+
+        nav{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:18px 8%;
+            background:#0d6efd;
+            color:white;
+            position:sticky;
+            top:0;
+            z-index:1000;
+        }
+
+        nav h2{
+            font-size:28px;
+        }
+
+        nav ul{
+            display:flex;
+            list-style:none;
+            gap:30px;
+        }
+
+        nav ul li a{
+            color:white;
+            text-decoration:none;
+            font-weight:500;
+            transition:.3s;
+        }
+
+        nav ul li a:hover{
+            color:#ffd43b;
+        }
+
+        .login-btn{
+            padding:10px 22px;
+            border:none;
+            background:white;
+            color:#0d6efd;
+            border-radius:30px;
+            cursor:pointer;
+            font-weight:600;
+            transition:.3s;
+        }
+
+        .login-btn:hover{
+            background:#ffd43b;
+        }
+
+        /* Hero Section */
+
+        .hero{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:80px 8%;
+            min-height:90vh;
+        }
+
+        .hero-text{
+            width:50%;
+        }
+
+        .hero-text h1{
+            font-size:55px;
+            color:#0d6efd;
+            margin-bottom:20px;
+        }
+
+        .hero-text p{
+            font-size:18px;
+            line-height:30px;
+            margin-bottom:35px;
+        }
+
+        .hero-btn{
+            padding:14px 30px;
+            border:none;
+            border-radius:30px;
+            background:#0d6efd;
+            color:white;
+            font-size:16px;
+            cursor:pointer;
+            transition:.3s;
+        }
+
+        .hero-btn:hover{
+            background:#084298;
+        }
+
+        .hero img{
+            width:450px;
+        }
+
+        /* Features */
+
+        .features{
+            padding:70px 8%;
+            text-align:center;
+        }
+
+        .features h2{
+            font-size:40px;
+            margin-bottom:40px;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:25px;
+        }
+
+        .card{
+            background:white;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 5px 20px rgba(0,0,0,.08);
+            transition:.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-8px);
+        }
+
+        .card i{
+            font-size:45px;
+            color:#0d6efd;
+            margin-bottom:20px;
+        }
+
+        .card h3{
+            margin-bottom:15px;
+        }
+
+        /* Statistics */
+
+        .stats{
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:20px;
+            background:#0d6efd;
+            color:white;
+            padding:60px 8%;
+            text-align:center;
+        }
+
+        .stats h2{
+            font-size:42px;
+        }
+
+        .stats p{
+            margin-top:10px;
+        }
+
+        /* Footer */
+
+        footer{
+            background:#111827;
+            color:white;
+            text-align:center;
+            padding:25px;
+        }
+
+        footer p{
+            font-size:15px;
+        }
+
+        @media(max-width:900px){
+
+            .hero{
+                flex-direction:column;
+                text-align:center;
+            }
+
+            .hero-text{
+                width:100%;
+            }
+
+            .hero img{
+                width:90%;
+                margin-top:40px;
+            }
+
+            .stats{
+                grid-template-columns:repeat(2,1fr);
+            }
+
+            nav ul{
+                display:none;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+<nav>
+
+    <h2>SMS</h2>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Students</a></li>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <button class="login-btn">Login</button>
+
+</nav>
+
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h1>Student Management System</h1>
+
+        <p>
+            A modern web application designed to manage student records,
+            admissions, attendance, academic performance, and administrative
+            tasks efficiently. Built using Java Full Stack technologies with
+            Spring Boot, MySQL, HTML, CSS, and JavaScript.
+        </p>
+
+        <button class="hero-btn">Get Started</button>
+
+    </div>
+
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png"
+         alt="Student">
+
+</section>
+
+
+
+<section class="features">
+
+    <h2>Our Features</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <i class="fa-solid fa-user-plus"></i>
+            <h3>Add Students</h3>
+            <p>Easily register new students and store their complete information.</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-pen-to-square"></i>
+            <h3>Update Records</h3>
+            <p>Modify student details quickly with an easy-to-use interface.</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-trash"></i>
+            <h3>Delete Students</h3>
+            <p>Remove inactive or duplicate student records securely.</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <h3>Search Students</h3>
+            <p>Find students instantly using name, ID, email, or phone number.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="stats">
+
+    <div>
+        <h2>1000+</h2>
+        <p>Students</p>
+    </div>
+
+    <div>
+        <h2>150+</h2>
+        <p>Courses</p>
+    </div>
+
+    <div>
+        <h2>50+</h2>
+        <p>Faculty Members</p>
+    </div>
+
+    <div>
+        <h2>99%</h2>
+        <p>Data Accuracy</p>
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 Student Management System | Developed using Java Full Stack
+    </p>
+
+</footer>
+
+</body>
+</html>

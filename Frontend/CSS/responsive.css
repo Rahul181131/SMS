@@ -1,0 +1,376 @@
+/*==================================================
+  Student Management System
+  Responsive Stylesheet
+==================================================*/
+
+/*==========================
+   Large Devices (1200px)
+==========================*/
+
+@media (max-width:1200px){
+
+.container{
+    width:95%;
+}
+
+.cards{
+    grid-template-columns:repeat(3,1fr);
+}
+
+}
+
+/*==========================
+   Laptops (992px)
+==========================*/
+
+@media (max-width:992px){
+
+nav{
+    padding:15px 25px;
+}
+
+.hero h1{
+    font-size:38px;
+}
+
+.hero p{
+    font-size:16px;
+}
+
+.cards{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.main{
+    margin-left:0;
+    padding:20px;
+}
+
+.sidebar{
+    position:relative;
+    width:100%;
+    height:auto;
+}
+
+.dashboard-card{
+    flex-direction:column;
+    text-align:center;
+    gap:10px;
+}
+
+.profile-info{
+    grid-template-columns:1fr;
+}
+
+}
+
+/*==========================
+   Tablets (768px)
+==========================*/
+
+@media (max-width:768px){
+
+/* Navigation */
+
+nav{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+nav h2{
+    margin-bottom:15px;
+}
+
+nav ul{
+    flex-direction:column;
+    gap:15px;
+}
+
+/* Hero */
+
+.hero{
+    padding:60px 20px;
+}
+
+.hero h1{
+    font-size:32px;
+}
+
+.hero p{
+    font-size:15px;
+}
+
+/* Cards */
+
+.cards{
+    grid-template-columns:1fr;
+}
+
+/* Forms */
+
+.form-container{
+    padding:25px;
+}
+
+.form-grid{
+    grid-template-columns:1fr;
+}
+
+.full-width{
+    grid-column:1;
+}
+
+.form-buttons{
+    flex-direction:column;
+}
+
+.form-buttons button,
+.form-buttons a{
+    width:100%;
+}
+
+/* Authentication */
+
+.auth-card{
+    padding:25px;
+}
+
+/* Search */
+
+.search-box{
+    width:100%;
+}
+
+/* Table */
+
+.table-container{
+    overflow-x:auto;
+}
+
+table{
+    min-width:700px;
+}
+
+/* Profile */
+
+.profile-info{
+    grid-template-columns:1fr;
+}
+
+.profile-header img{
+    width:100px;
+    height:100px;
+}
+
+}
+
+/*==========================
+   Mobile Phones (576px)
+==========================*/
+
+@media (max-width:576px){
+
+body{
+    font-size:14px;
+}
+
+/* Navigation */
+
+nav{
+    padding:15px;
+}
+
+nav h2{
+    font-size:24px;
+}
+
+nav ul li{
+    margin:5px 0;
+}
+
+/* Hero */
+
+.hero{
+    padding:45px 15px;
+}
+
+.hero h1{
+    font-size:28px;
+}
+
+.hero p{
+    font-size:14px;
+}
+
+/* Page Header */
+
+.page-header h1{
+    font-size:28px;
+}
+
+/* Dashboard */
+
+.cards{
+    gap:15px;
+}
+
+.card{
+    padding:20px;
+}
+
+.card i{
+    font-size:32px;
+}
+
+.dashboard-card h2{
+    font-size:24px;
+}
+
+/* Buttons */
+
+.btn{
+    width:100%;
+    text-align:center;
+    margin-bottom:10px;
+}
+
+/* Forms */
+
+.form-container{
+    padding:20px;
+    margin:20px auto;
+}
+
+.form-header h1{
+    font-size:26px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    font-size:14px;
+}
+
+/* Login/Register */
+
+.auth-card{
+    padding:20px;
+}
+
+.auth-card h2{
+    font-size:26px;
+}
+
+/* Profile */
+
+.profile-card{
+    padding:20px;
+}
+
+.profile-header img{
+    width:90px;
+    height:90px;
+}
+
+.profile-header h2{
+    font-size:22px;
+}
+
+.profile-item{
+    padding:12px;
+}
+
+/* Footer */
+
+footer{
+    font-size:14px;
+    padding:15px;
+}
+
+}
+
+/*==========================
+   Extra Small Devices
+==========================*/
+
+@media (max-width:400px){
+
+.hero h1{
+    font-size:24px;
+}
+
+nav h2{
+    font-size:20px;
+}
+
+.card{
+    padding:15px;
+}
+
+.form-header h1{
+    font-size:22px;
+}
+
+.auth-card h2{
+    font-size:22px;
+}
+
+.profile-header img{
+    width:80px;
+    height:80px;
+}
+
+.profile-header h2{
+    font-size:20px;
+}
+
+}
+
+/*==========================
+   Landscape Mode
+==========================*/
+
+@media (orientation:landscape) and (max-width:768px){
+
+.hero{
+    padding:40px 20px;
+}
+
+.form-container{
+    margin:20px auto;
+}
+
+}
+
+/*==========================
+   Print Styles
+==========================*/
+
+@media print{
+
+nav,
+.sidebar,
+footer,
+.form-buttons,
+.btn{
+    display:none;
+}
+
+body{
+    background:#fff;
+}
+
+.container,
+.form-container,
+.profile-card{
+    box-shadow:none;
+    width:100%;
+    margin:0;
+}
+
+table{
+    border:1px solid #000;
+}
+
+}

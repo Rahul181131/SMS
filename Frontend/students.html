@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Students | Student Management System</title>
+
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+
+body{
+
+    background:#f4f7fc;
+
+}
+
+
+/* Navbar */
+
+.navbar{
+
+    background:#2563eb;
+    color:white;
+    padding:18px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+
+
+.navbar h2{
+
+    font-size:26px;
+
+}
+
+
+.navbar a{
+
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+
+}
+
+
+
+/* Container */
+
+
+.container{
+
+    width:95%;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+
+
+.container h1{
+
+    text-align:center;
+    color:#2563eb;
+    margin-bottom:25px;
+
+}
+
+
+
+/* Button */
+
+
+.add-btn{
+
+    display:inline-block;
+    background:#10b981;
+    color:white;
+    padding:12px 20px;
+    border-radius:8px;
+    text-decoration:none;
+    margin-bottom:20px;
+
+}
+
+
+/* Table */
+
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+
+}
+
+
+th{
+
+    background:#2563eb;
+    color:white;
+    padding:15px;
+
+}
+
+
+td{
+
+    padding:12px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+
+}
+
+
+tr:hover{
+
+    background:#f1f5f9;
+
+}
+
+
+/* Buttons */
+
+
+.edit{
+
+    background:#f59e0b;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:5px;
+    cursor:pointer;
+
+}
+
+
+
+.delete{
+
+    background:#ef4444;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:5px;
+    cursor:pointer;
+
+}
+
+
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<!-- Navbar -->
+
+<div class="navbar">
+
+
+<h2>
+Student Management System
+</h2>
+
+
+<div>
+
+<a href="dashboard.html">
+Dashboard
+</a>
+
+
+<a href="addStudent.html">
+Add Student
+</a>
+
+
+<a href="login.html">
+Logout
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="container">
+
+
+<h1>
+Student List
+</h1>
+
+<div style="margin:20px 0; display:flex; gap:10px;">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search students"
+        onkeyup="searchStudent()"
+        style="
+            width:300px;
+            padding:10px;
+            border:1px solid #ccc;
+            border-radius:6px;
+        ">
+
+    <button
+        onclick="searchStudent()"
+        style="
+            padding:10px 20px;
+            background:#2563eb;
+            color:white;
+            border:none;
+            border-radius:6px;
+            cursor:pointer;
+        ">
+        Search
+    </button>
+
+</div>
+
+
+<a href="addStudent.html" class="add-btn">
+
+<i class="fa-solid fa-user-plus"></i>
+Add Student
+
+</a>
+
+
+
+
+<table>
+
+
+<thead>
+
+
+<tr>
+
+<th>ID</th>
+
+<th>Student ID</th>
+
+<th>Name</th>
+
+<th>Email</th>
+
+<th>Mobile</th>
+
+<th>Gender</th>
+
+<th>Department</th>
+
+<th>Course</th>
+
+<th>Actions</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+<tbody id="studentTableBody">
+
+
+<!-- Data comes from students.js -->
+
+
+</tbody>
+
+
+
+</table>
+
+
+</div>
+
+
+
+
+<script src="javaScript/api.js"></script>
+<script src="javaScript/students.js"></script>
+
+
+
+
+</body>
+
+</html>

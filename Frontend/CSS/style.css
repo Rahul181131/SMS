@@ -1,0 +1,472 @@
+/*==================================================
+  Student Management System
+  Common Stylesheet
+==================================================*/
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/*==========================
+    CSS Variables
+===========================*/
+
+:root{
+
+    --primary:#2563eb;
+    --primary-dark:#1d4ed8;
+    --secondary:#0ea5e9;
+    --success:#16a34a;
+    --warning:#f59e0b;
+    --danger:#dc2626;
+
+    --white:#ffffff;
+    --light:#f4f7fc;
+    --gray:#6b7280;
+    --dark:#1e293b;
+
+    --shadow:0 8px 20px rgba(0,0,0,.08);
+    --radius:10px;
+
+}
+
+/*==========================
+      Reset
+===========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--light);
+    color:#333;
+    line-height:1.6;
+}
+
+img{
+    max-width:100%;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+/*==========================
+      Container
+===========================*/
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/*==========================
+      Navigation
+===========================*/
+
+nav{
+    background:var(--primary);
+    color:var(--white);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+    box-shadow:var(--shadow);
+}
+
+nav h2{
+    font-size:28px;
+    font-weight:700;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    color:white;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#fde047;
+}
+
+/*==========================
+      Hero Section
+===========================*/
+
+.hero{
+
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:18px;
+}
+
+/*==========================
+        Sidebar
+===========================*/
+
+.sidebar{
+
+    width:240px;
+    height:100vh;
+    background:var(--dark);
+    color:white;
+    position:fixed;
+    left:0;
+    top:0;
+}
+
+.sidebar h2{
+
+    text-align:center;
+    padding:25px 0;
+}
+
+.sidebar ul li{
+
+    padding:16px 25px;
+    transition:.3s;
+}
+
+.sidebar ul li:hover{
+
+    background:#334155;
+}
+
+.sidebar ul li a{
+
+    color:white;
+    display:block;
+}
+
+.sidebar i{
+
+    margin-right:10px;
+}
+
+/*==========================
+      Main Content
+===========================*/
+
+.main{
+
+    margin-left:240px;
+    padding:30px;
+}
+
+/*==========================
+      Cards
+===========================*/
+
+.cards{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+
+    background:white;
+    padding:25px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    transition:.3s;
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+}
+
+.card i{
+
+    font-size:40px;
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.card h3{
+
+    margin-bottom:10px;
+}
+
+/*==========================
+      Dashboard Cards
+===========================*/
+
+.dashboard-card{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.dashboard-card h2{
+
+    font-size:30px;
+    color:var(--primary);
+}
+
+/*==========================
+      Buttons
+===========================*/
+
+.btn{
+
+    display:inline-block;
+    padding:12px 22px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+    transition:.3s;
+}
+
+.btn-primary{
+
+    background:var(--primary);
+    color:white;
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-dark);
+}
+
+.btn-success{
+
+    background:var(--success);
+    color:white;
+}
+
+.btn-success:hover{
+
+    opacity:.9;
+}
+
+.btn-danger{
+
+    background:var(--danger);
+    color:white;
+}
+
+.btn-danger:hover{
+
+    opacity:.9;
+}
+
+.btn-warning{
+
+    background:var(--warning);
+    color:white;
+}
+
+/*==========================
+      Search Box
+===========================*/
+
+.search-box{
+
+    position:relative;
+    width:320px;
+}
+
+.search-box input{
+
+    width:100%;
+    padding:12px 40px 12px 15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    outline:none;
+}
+
+.search-box i{
+
+    position:absolute;
+    right:15px;
+    top:14px;
+    color:gray;
+}
+
+/*==========================
+        Table
+===========================*/
+
+.table-container{
+
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    margin-top:20px;
+}
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th{
+
+    background:var(--primary);
+    color:white;
+    padding:15px;
+}
+
+table td{
+
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #eee;
+}
+
+table tr:hover{
+
+    background:#f9fafb;
+}
+
+/*==========================
+      Page Header
+===========================*/
+
+.page-header{
+
+    margin-bottom:30px;
+}
+
+.page-header h1{
+
+    color:var(--primary);
+    margin-bottom:8px;
+}
+
+.page-header p{
+
+    color:var(--gray);
+}
+
+/*==========================
+      Footer
+===========================*/
+
+footer{
+
+    margin-top:40px;
+    background:var(--dark);
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/*==========================
+      Utility Classes
+===========================*/
+
+.text-center{
+    text-align:center;
+}
+
+.mt-1{
+    margin-top:10px;
+}
+
+.mt-2{
+    margin-top:20px;
+}
+
+.mt-3{
+    margin-top:30px;
+}
+
+.mt-4{
+    margin-top:40px;
+}
+
+.mb-1{
+    margin-bottom:10px;
+}
+
+.mb-2{
+    margin-bottom:20px;
+}
+
+.mb-3{
+    margin-bottom:30px;
+}
+
+.mb-4{
+    margin-bottom:40px;
+}
+
+.p-1{
+    padding:10px;
+}
+
+.p-2{
+    padding:20px;
+}
+
+.rounded{
+    border-radius:10px;
+}
+
+.shadow{
+    box-shadow:var(--shadow);
+}
+
+/*==========================
+      Animations
+===========================*/
+
+.fade-in{
+
+    animation:fadeIn .7s ease-in-out;
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
