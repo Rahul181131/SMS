@@ -9,7 +9,7 @@
 //=========================================
 
 
-const BASE_URL = "https://sms-web-yawo.onrender.com";
+const BASE_URL = "https://sms-web-yawo.onrender.com/api/students";
 
 //=========================================
 // Get Token

@@ -8,8 +8,7 @@ if(role !== "ADMIN"){
 
 }
 console.log("addstudent.js loaded")
-
-const BASE_URL = "/api";
+const BASE_URL = "https://sms-web-yawo.onrender.com/api/students";
 
 
 const studentForm = document.getElementById("studentForm");
