@@ -14,9 +14,7 @@ async function loadStudents() {
 
     try {
 
-        const response = await fetch(
-            `${BASE_URL}/students`
-        );
+        const response = awaitfetch(BASE_URL)
 
 
         const students = await response.json();
@@ -94,64 +92,7 @@ function editStudent(id) {
 
 }
 
-function displayStudents(students) {
 
-    const tableBody = document.getElementById("studentTableBody");
-
-    tableBody.innerHTML = "";
-
-    students.forEach(student => {
-
-        tableBody.innerHTML += `
-        <tr>
-
-            <td>${student.id}</td>
-            <td>${student.studentId}</td>
-            <td>${student.name}</td>
-            <td>${student.email}</td>
-            <td>${student.mobile}</td>
-            <td>${student.gender}</td>
-            <td>${student.department}</td>
-            <td>${student.course}</td>
-
-            <td>
-
-            ${
-                role === "ADMIN"
-
-                ?
-
-                `
-                <button class="edit"
-                onclick="editStudent(${student.id})">
-                Edit
-                </button>
-
-                <button class="delete"
-                onclick="deleteStudent(${student.id})">
-                Delete
-                </button>
-                `
-
-                :
-
-                `
-                <button
-                onclick="viewStudent(${student.id})">
-                View
-                </button>
-                `
-
-            }
-
-            </td>
-
-        </tr>
-        `;
-
-    });
-
-}
 
 async function searchStudents(keyword) {
 

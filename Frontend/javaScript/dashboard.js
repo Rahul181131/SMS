@@ -72,8 +72,7 @@ async function loadDashboard(){
 
     try{
 
-        const response = await fetch(
-            `${BASE_URL}/students`
+        const response = await fetch(BASE_URL
         );
 
 
